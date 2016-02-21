@@ -1,0 +1,38 @@
+{
+  "question": "Explain the difference in the ease of bromination between cyclohexene and benzene",
+  "keypoints": [
+    {
+      "answer": "Addition of bromine to benzene is harder than addition of bromine to cyclohexene."
+    },
+    {
+      "answer": "Cyclohexene readily reacts with bromine water."
+    },
+    {
+      "answer": "Large localised electron density of the C=C double bond in alkenes can create dipoles on the bromine molecule."
+    },
+    {
+      "answer": "Benzene requires halogen carrier."
+    },
+    {
+      "answer": "Benzene's delocalised electrons are spread over all 6 carbons in the ring."
+    },
+    {
+      "answer": "Benzene has a lower pi-electron density than alkenes."
+    },
+    {
+      "answer": "Benzene is very stable due to the delocalisation of benzene ring."
+    },
+    {
+      "answer": "Delocalisation makes it harder to produce dipoles on the halogen molecule (hence the need for halogen carrier)."
+    },
+    {
+      "answer": "High electron density of double bond in cyclohexene makes it easier to form dipoles on the halogen molecule."
+    }
+  ],
+  "tags": [
+    "arenes",
+    "bromination",
+    "benzene",
+    "cyclohexene"
+  ]
+}

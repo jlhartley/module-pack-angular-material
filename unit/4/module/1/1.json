@@ -1,0 +1,51 @@
+{
+  "question": "Describe Kekulé's model of the bonding in benzene",
+  "keypoints": [
+    {
+      "socraticPrompts": [
+        "What is the overall shape?",
+        "How many carbon atoms are there?",
+        "Are there single or double bonds?",
+        "How are the bonds arranged?"
+      ],
+      "partial": "A __ng of _ car___ atoms ___ned by _____nate sin___ and ___ble bonds",
+      "answer": "A ring of 6 carbon atoms joined by alternate single and double bonds."
+    },
+    {
+      "socraticPrompts": [
+        "What about the reactivity?",
+        "What is the connection with bromine?"
+      ],
+      "partial": "Benzene is not very ___active (will not _____ with ___mine under stan____ cond_______) though to two _____ of the molecule in rapid equi_______ were suggested",
+      "answer": "Benzene is not very reactive (will not react with bromine under standard conditions) though so two forms of the molecule in rapid equilibrium were suggested."
+    },
+    {
+      "socraticPrompts": [
+        "What was suggested to help explain the reactivity?"
+      ],
+      "answer": "It was hypothesised that the bromine molecule could not be attracted to the double bond before the structure changed."
+    },
+    {
+      "socraticPrompts": [
+        "Why does it seem that the model is incorrect?",
+        "How do single bonds and double bonds differ?"
+      ],
+      "answer": "C-C single bonds and C=C double bonds have different lengths."
+    },
+    {
+      "socraticPrompts": [
+        "How are X-ray studies related?",
+        "What do X-ray studies show about the bond lengths?"
+      ],
+      "answer": "X-ray studies of benzene show that all 6 of the carbon-carbon bond lengths are the same."
+    },
+    {
+      "answer": "This does not fit with Kekulé's model."
+    }
+  ],
+  "tags": [
+    "arenes",
+    "benzene",
+    "model"
+  ]
+}

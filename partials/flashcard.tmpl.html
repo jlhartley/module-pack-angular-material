@@ -1,0 +1,43 @@
+<!-- Site content -->
+<!-- TODO: Margin auto 0 -->
+<md-content class="spaced" layout-padding layout="column" layout-align="start center" flex>
+		
+		<div class="md-whiteframe-z3" style="width:80%;">
+
+			<md-toolbar class="questionToolbar">
+				<h3 class="md-toolbar-tools">Question Title / Topic Area?</h3>
+			</md-toolbar>
+
+			<!-- Content after the question header -->
+			<div style="margin-left: 4px">
+				<!-- <h4>Define the term <em>'first ionisation energy'</em></h4> -->
+				<h4>{{flashcardController.flashcard.question}}</h4>
+
+				<div layout="column" ng-repeat="keypoint in flashcardController.flashcard.keypoints">
+					<ul ng-show="promptsShown">
+						<li ng-repeat="prompt in keypoint.socraticPrompts">{{prompt}}</li>
+					</ul>
+					<section layout="row" layout-padding layout-wrap>
+						<textarea  placeholder="Keypoint {{$index + 1}}" flex></textarea>
+						<md-button class="md-primary md-raised" ng-click="promptsShown = true">Show Prompts</md-button>
+						<md-button class="md-primary md-raised" ng-click="answerShown = true">Show Answer</md-button>
+					</section>
+					<p class="answer" ng-show="answerShown">Answer: {{keypoint.answer}}</p>
+				</div>
+
+
+				
+
+				<!--<textarea placeholder="Enter your answer here" class="answerTextarea" layout-padding type="text" ng-model="appController.answer"></textarea>-->
+				<div layout="row">
+					<md-button class="md-primary md-raised">Check Answers</md-button>
+					<span flex></span>
+					<md-button class="md-primary" ng-click="flashcardController.previousFlashcard()" ng-show="flashcardController.flashcardIndex != 1">Previous</md-button>
+					<md-button class="md-primary" ng-click="flashcardController.nextFlashcard()">Next</md-button>
+				</div>
+				
+			</div>
+		
+	</div>
+	
+</md-content>

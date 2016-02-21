@@ -1,0 +1,30 @@
+{
+  "question": "Outline the mechanism for electrophilic substitution in arenes",
+  "keypoints": [
+    {
+      "title": "Nitration",
+      "answer": [
+        "Nitrite ion production: HNO<sub>3</sub> + H<sub>2</sub>SO<sub>4</sub> --> NO2+ + HSO4- + H2O",
+        {
+          "img-src": "TODO"
+        },
+        "At the end: H+ + HSO4- --> H2SO4"
+      ]
+    },
+    {
+      "title": "Halogenation",
+      "answer": [
+        "Bromine polarisation: Br2 + FeBr3 --> Br+ + FeBr4-",
+        {
+          "img-src": "TODO"
+        },
+        "At the end: H+ + FeBr4- --> FeBr3 + HBr"
+      ]
+    }
+  ],
+  "tags": [
+    "arenes",
+    "electrophilic substitution",
+    "mechanism"
+  ]
+}

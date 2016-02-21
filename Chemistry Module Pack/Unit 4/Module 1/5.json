@@ -1,0 +1,27 @@
+{
+  "question": "Describe the electrophilic substitution of arenes with halogens",
+  "keypoints": [
+    {
+      "title": "Equation",
+      "answer": {
+        "img-src": "TODO"
+      }
+    },
+    {
+      "title": "Conditions",
+      "answer": [
+        "Halogen carrier (FeCl<sub>3</sub> or AlCl<sub>3</sub>)",
+        "The halogen carrier polarises the halogen molecule allowing it to behave as an electrophile."
+      ]
+    },
+    {
+      "title": "Reaction",
+      "answer": "Electrophilic substitution"
+    }
+  ],
+  "tags": [
+    "arenes",
+    "electrophilic substitution",
+    "halogenation"
+  ]
+}

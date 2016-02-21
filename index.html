@@ -1,0 +1,99 @@
+<html>
+
+<head>
+	<!-- AngularJS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-aria.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-messages.min.js"></script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-resource.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-sanitize.min.js"></script>
+	
+	<!-- Angular Material -->
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.5/angular-material.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.5/angular-material.min.js"></script>
+	
+	<!-- Our Code -->
+	<script src="app.js"></script>
+	<link rel="stylesheet" href="app.css">
+	
+	<!-- TODO: The title should change from page to page -->
+	<title>Flashcard Practice</title>
+</head>
+
+
+<body ng-app="app" ng-controller="AppController as appController" layout="row">
+	
+	<!-- Sidenav -->
+	<md-sidenav md-component-id="leftSidenav" class="md-sidenav-left md-whiteframe-z2" md-is-locked-open="$mdMedia('gt-sm')">
+		
+		<!-- Sidenav Header -->
+		<md-toolbar layout-padding flex="none">
+			<h3 class="md-toolbar-tools">Subjects</h3>
+		</md-toolbar>
+		
+		<!-- Sidenav Content - Navigation -->
+		<!-- ng-controller="SidenavController as sidenavController" -->
+		<md-content role="navigation">
+			<!-- Subject List -->
+			<md-list>
+				<!-- Subject List Item -->
+				<md-list-item layout="column" ng-repeat="subject in appController.subjects" class="navListItem" ng-class="{toggled: appController.isSubjectSelected(subject)}">
+				
+					<md-button class="navListButton md-primary md-button-toggle" ng-click="appController.toggleSubjectSelection(subject)">
+						<div layout="row" flex>{{subject.name}}<span flex></span><md-icon md-svg-src="md-toggle-arrow" class="md-toggle-icon"></md-icon></div>
+					</md-button>
+					
+					
+					<!-- Unit List -->
+					<md-list class="navSubList" >
+						
+						<md-list-item ng-repeat="unit in subject.units" style="padding: 0;">
+							<a class="navListButton md-button md-ink-ripple md-primary md-button-toggle" ng-click="appController.selectUnit(unit)" ng-href="#/module-selection"=>
+								<span>{{unit.name + ": " + unit.description}}</span>
+							</a>
+						</md-list-item>
+						
+						
+					</md-list>
+					
+				</md-list-item>
+				
+			</md-list>
+		</md-content>
+		
+	</md-sidenav>
+	
+	
+	<!-- All the main content goes here -->
+	<div layout="column" flex>
+		
+		<!-- Site header -->
+		<md-toolbar layout-padding class="md-whiteframe-z1">
+			<div class="md-toolbar-tools">
+				<md-button class="md-icon-button" ng-click="appController.toggleSidenav()" hide-gt-sm>
+					<md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+				</md-button>
+				<!-- Currently Selected Subject > Unit > Module -->
+				<h3>{{appController.getHeader()}}</h3>
+			</div>
+		</md-toolbar>
+
+		
+
+		<!-- Site content -->
+		<div ng-view></div>
+		
+
+		
+	</div>
+		
+
+	
+</body>
+
+
+
+</html>

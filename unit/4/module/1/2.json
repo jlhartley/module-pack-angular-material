@@ -1,0 +1,50 @@
+{
+  "question": "Describe the delocalised model for the bonding in benzene",
+  "keypoints": [
+    {
+      "socraticPrompts": [
+        "What is the general shape?",
+        "What about the 3D shape? What is another word meaning 'flat'?"
+      ],
+      "answer": "Carbon atoms are arranged in a planar hexagonal ring."
+    },
+    {
+      "socraticPrompts": [
+        "What is the bond angle around each carbon?",
+        "What is the molecule shape name?"
+      ],
+      "answer": "120°, trigonal planar around each carbon."
+    },
+    {
+      "socraticPrompts": [
+        "What is the first type of bonding between each carbon?",
+        "What is the name for the bonding which is not delocalised?"
+      ],
+      "answer": "1 sigma bond between each carbon."
+    },
+    {
+      "socraticPrompts": [
+        "How do the elections in the carbon p-orbitals behave?"
+      ],
+      "answer": "The electron in a carbon p-orbital overlaps with the electrons from p-orbitals of carbon atoms on either side."
+    },
+    {
+      "socraticPrompts": [
+        "What is significant about the pi bonds?",
+        "How does delocalisation occur?"
+      ],
+      "answer": "Pi bonds not localised between 2 carbon atoms but are delocalised over all 6 carbon atoms."
+    },
+    {
+      "answer": "Pi molecular orbitals are formed by an overlap of carbon p atomic orbitals."
+    },
+    {
+      "answer": "To achieve maximum overlap the molecule must be planer."
+    }
+  ],
+  "tags": [
+    "arenes",
+    "benzene",
+    "model"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "question": "Describe the electrophilic substitution of arenes with concentrated nitric acid",
+  "keypoints": [
+    {
+      "title": "Equation",
+      "answer": {
+        "text": "Need concentrated nitric acid in the presence of concentrated sulfuric acid",
+        "img-src": "TODO"
+      }
+    },
+    {
+      "title": "Conditions",
+      "answer": [
+        "Concentrated HNO<sub>3</sub>",
+        "Concentrated H<sub>2</sub>SO<sub>4</sub>",
+        "50-55°C"
+      ]
+    },
+    {
+      "title": "Uses",
+      "answer": [
+        "Explosives (TNT)",
+        "Pharmaceuticals",
+        "Dyes"
+      ]
+    },
+    {
+      "title": "Reaction",
+      "answer": [
+        "Electrophilic substitution"
+      ]
+    }
+  ],
+  "tags": [
+    "arenes",
+    "electrophilic substitution",
+    "nitration"
+  ]
+}

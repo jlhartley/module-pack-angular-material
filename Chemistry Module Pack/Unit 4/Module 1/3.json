@@ -1,0 +1,32 @@
+{
+  "question": "Give the evidence for the delocalised model of benzene",
+  "keypoints": [
+    {
+      "title": "Bond lengths",
+      "answer": [
+        "X-ray data shows that the bond lengths for all C-C bonds are the same.",
+        "This suggests there cannot be double and single bonds between carbon atoms and delocalisation is more likely."
+      ]
+    },
+    {
+      "title": "Enthalpy change of hydrogenation",
+      "answer": [
+        "If benzene has 3 double bonds then the enthalpy change of hydrogenation should be 3 times as large as it would be for cyclohexene.",
+        "When tested experimentally the energy change is significantly less than expected. This suggests the structure is more stable."
+      ]
+    },
+    {
+      "title": "Low reactivity",
+      "answer": [
+        "You would expect a structure with carbon-carbon double bonds to react with bromine under standard conditions.",
+        "Benzene does not."
+      ]
+    }
+  ],
+  "tags": [
+    "arenes",
+    "benzene",
+    "model",
+    "delocalised"
+  ]
+}

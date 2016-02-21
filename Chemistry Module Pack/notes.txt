@@ -1,0 +1,12 @@
+Automated answer checking
+
+Have a way to match alternative words / words with identical meaning
+- Something similar to regex matching but with markup too
+
+Split answer box into a box for each point?
+
+
+Need an algorithm for hiding key words / generating partials.
+
+Have an equation object
+Have a way to link related questions
