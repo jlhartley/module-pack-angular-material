@@ -17,14 +17,13 @@
 					<ul ng-show="promptsShown">
 						<li ng-repeat="prompt in keypoint.socraticPrompts">{{prompt}}</li>
 					</ul>
-					<section layout="row" layout-padding layout-wrap>
-						<textarea  placeholder="Keypoint {{$index + 1}}" flex></textarea>
+					<section layout="row" layout-xs="column" layout-padding layout-wrap>
+						<textarea  placeholder="Keypoint {{$index + 1}}" flex-xs="15" flex></textarea>
 						<md-button class="md-primary md-raised" ng-click="promptsShown = true">Show Prompts</md-button>
 						<md-button class="md-primary md-raised" ng-click="answerShown = true">Show Answer</md-button>
 					</section>
 					<p class="answer" ng-show="answerShown">Answer: {{keypoint.answer}}</p>
 				</div>
-
 
 				
 
