@@ -127,71 +127,66 @@ app.factory('FlashcardService', function($resource) {
 });
 
 
-app.controller('AppController', function($mdSidenav, $mdMedia, SubjectService) {
+app.controller('AppController', function($scope, $mdSidenav, $mdMedia, SubjectService) {
 	
 	/* Sidenav related functions */
 	
-	this.toggleSidenav = function() {
+	$scope.toggleSidenav = function() {
 		$mdSidenav("leftSidenav").toggle();
 	};
-
-	// The sidenav should be locked open for "greater than small"
-	this.sidenavShouldLockOpen = function() {
-		return $mdMedia('gt-sm');
-	};
 	
-	this.isSidenavLockedOpen = function() {
+	$scope.isSidenavLockedOpen = function() {
 		return $mdSidenav("leftSidenav").isLockedOpen();
 	}
 	
 
 
-	this.subjects = SubjectService.subjects;
+	$scope.subjects = SubjectService.subjects;
 	
-	this.selectedSubject = null;
-	this.selectedUnit = null;
+	$scope.selectedSubject = null;
+	$scope.selectedUnit = null;
 
-	this.toggleSubjectSelection = function(subject) {
-		if (this.selectedSubject == subject) {
-			this.selectedSubject = null;
+	$scope.toggleSubjectSelection = function(subject) {
+		if ($scope.selectedSubject == subject) {
+			$scope.selectedSubject = null;
 		} else {
-			this.selectedSubject = subject
-			this.selectedUnit = null;
+			$scope.selectedSubject = subject
+			$scope.selectedUnit = null;
 		}
 	}
 	
-	this.isSubjectSelected = function(subject) {
-		return this.selectedSubject == subject;
+	$scope.isSubjectSelected = function(subject) {
+		return $scope.selectedSubject == subject;
 	}
 
-	this.selectUnit = function(unit) {
-		this.selectedUnit = unit;
-		console.log("New unit selected: " + this.selectedUnit)
+	$scope.selectUnit = function(unit) {
+		$scope.selectedUnit = unit;
+		console.log("New unit selected: " + $scope.selectedUnit)
 		// If the sidenav isn't locked open, toggle it closed again
-		if (!this.isSidenavLockedOpen()) {
-			this.toggleSidenav();
+		if (!$scope.isSidenavLockedOpen()) {
+			$scope.toggleSidenav();
 		}
 	}
 
-	this.isUnitSelected = function(unit) {
-		return this.selectedUnit == unit;
+	$scope.isUnitSelected = function(unit) {
+		return $scope.selectedUnit == unit;
 	}
 
 	// Concatenate a unit's name and description
-	this.getUnitTitle = function(unit) {
+	$scope.getUnitTitle = function(unit) {
 		return unit.name + ": " + unit.description;
 	}
 
-	this.getHeader = function() {
-		if (!this.selectedSubject) {
+	$scope.getHeader = function() {
+		if (!$scope.selectedSubject) {
 			return 'Welcome';
 		}
 
-		if (!this.selectedUnit) {
-			return this.selectedSubject.name;
+		if (!$scope.selectedUnit) {
+			return $scope.selectedSubject.name;
 		}
 
-		var header = this.selectedSubject.name + " > " + this.getUnitTitle(this.selectedUnit);
+		var header = $scope.selectedSubject.name + " > " + $scope.getUnitTitle($scope.selectedUnit);
 		return header;
 	}
 });

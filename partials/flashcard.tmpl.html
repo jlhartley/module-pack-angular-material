@@ -18,7 +18,12 @@
 						<li ng-repeat="prompt in keypoint.socraticPrompts">{{prompt}}</li>
 					</ul>
 					<section layout="row" layout-xs="column" layout-padding layout-wrap>
-						<textarea  placeholder="Keypoint {{$index + 1}}" flex-xs="15" flex></textarea>
+						<!-- TODO: Consider doing some more styling here -->
+						<!-- textarea placeholder="Keypoint {{$index + 1}}" flex-xs="15" flex></textarea> -->
+						<md-input-container flex>
+							<label>Keypoint {{$index + 1}}</label>
+							<input ng-model="answers[$index]">
+						</md-input-container>
 						<md-button class="md-primary md-raised" ng-click="promptsShown = true">Show Prompts</md-button>
 						<md-button class="md-primary md-raised" ng-click="answerShown = true">Show Answer</md-button>
 					</section>

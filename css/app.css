@@ -6,6 +6,8 @@ md-content[role=navigation] {
 	border-bottom: 1px solid #398820
 }
 
+/* The rotation transition for the down arrow toggle icon */
+
 .navListItem .md-toggle-icon {
 	transform: rotate(180deg);
 	transition: transform 0.2s ease-in-out;
@@ -52,6 +54,10 @@ md-content[role=navigation] {
 	text-transform: none;
 	text-align: left;
 	padding: 0 16px 0 24px;
+}
+
+.navSubListItem {
+	padding: 0;
 }
 
 

@@ -1,4 +1,4 @@
-<html>
+<html ng-app="app" ng-controller="AppController">
 
 <head>
 
@@ -28,10 +28,10 @@
 </head>
 
 
-<body ng-app="app" ng-controller="AppController as appController" layout="row">
+<body layout="row">
 	
 	<!-- Sidenav -->
-	<md-sidenav md-component-id="leftSidenav" class="md-sidenav-left md-whiteframe-z2" md-is-locked-open="$mdMedia('gt-sm')">
+	<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="leftSidenav" md-is-locked-open="$mdMedia('gt-sm')">
 		
 		<!-- Sidenav Header -->
 		<md-toolbar layout-padding flex="none">
@@ -44,9 +44,9 @@
 			<!-- Subject List -->
 			<md-list>
 				<!-- Subject List Item -->
-				<md-list-item layout="column" ng-repeat="subject in appController.subjects" class="navListItem" ng-class="{toggled: appController.isSubjectSelected(subject)}">
+				<md-list-item layout="column" ng-repeat="subject in subjects" class="navListItem" ng-class="{toggled: isSubjectSelected(subject)}">
 				
-					<md-button class="navListButton md-primary md-button-toggle" ng-click="appController.toggleSubjectSelection(subject)">
+					<md-button class="navListButton md-primary md-button-toggle" ng-click="toggleSubjectSelection(subject)">
 						<div layout="row" flex>{{subject.name}}<span flex></span><md-icon md-svg-src="md-toggle-arrow" class="md-toggle-icon"></md-icon></div>
 					</md-button>
 					
@@ -54,8 +54,8 @@
 					<!-- Unit List -->
 					<md-list class="navSubList" >
 						
-						<md-list-item ng-repeat="unit in subject.units" style="padding: 0;">
-							<a class="navListButton md-button md-ink-ripple md-primary md-button-toggle" ng-click="appController.selectUnit(unit)" ng-href="#/module-selection"=>
+						<md-list-item ng-repeat="unit in subject.units" class="navSubListItem">
+							<a class="navListButton md-button md-ink-ripple md-primary md-button-toggle" ng-click="selectUnit(unit)" ng-href="#/module-selection"=>
 								<span>{{unit.name + ": " + unit.description}}</span>
 							</a>
 						</md-list-item>
@@ -78,11 +78,11 @@
 		<!-- Site header -->
 		<md-toolbar layout-padding class="md-whiteframe-z1">
 			<div class="md-toolbar-tools">
-				<md-button class="md-icon-button" ng-click="appController.toggleSidenav()" hide-gt-sm>
+				<md-button class="md-icon-button" ng-click="toggleSidenav()" hide-gt-sm>
 					<md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
 				</md-button>
 				<!-- Currently Selected Subject > Unit > Module -->
-				<h3>{{appController.getHeader()}}</h3>
+				<h3>{{getHeader()}}</h3>
 			</div>
 		</md-toolbar>
 
